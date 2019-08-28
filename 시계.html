@@ -1,0 +1,122 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>clock</title>
+  <style>
+	#clock { position:relative;width:300px;height:300px; }
+	#clock img { position:absolute;top:0;left:0; }
+	#digital { width:300px; height:20px; text-align:center; }
+	}
+  </style>
+ </head>
+ <body>
+	<div id="clock">
+		<img src="http://images.webskills.kr/etc/clock.png">
+		<img id="hour" src="http://images.webskills.kr/etc/h.png">
+		<img id="munite" src="http://images.webskills.kr/etc/m.png">
+		<img id="second" src="http://images.webskills.kr/etc/s.png">
+	</div>
+	<div id="digital"></div>
+	<script>
+		function digital()
+		{
+			var d = new Date(); /* d = 현재 시간 */
+			var h = d.getHours(); /* h = 시간 */
+			var m = d.getMinutes(); /* m = 분 */
+			var s = d.getSeconds(); /* s = 초 */
+
+			/* 시간을 12시간 단위로 하기 위해 12보다 큰 경우 12를 빼줌 */
+			if( h > 12 ) h = h - 12;
+
+			var dh = ( h * 30 ) + ( m / 2 ); /* dh = 시침의 각도 */
+			dh = parseInt( dh ); /* 시침의 각도를 정수형으로 변환 */
+			var dm = m * 6; /* 분침의 각도 */
+			var ds = s * 6; /* 초침의 각도 */
+
+			/* 시침, 분침, 초침의 각도를 계산한 값으로 변경 */
+			/* IE 10+, Firefox */
+			document.getElementById("hour").style.transform = "rotate(" + dh + "deg)";
+			document.getElementById("munite").style.transform = "rotate(" + dm + "deg)";
+			document.getElementById("second").style.transform = "rotate(" + ds + "deg)";
+
+			/* IE 9 */
+			document.getElementById("hour").style.MsTransform = "rotate(" + dh + "deg)";
+			document.getElementById("munite").style.MsTransform = "rotate(" + dm + "deg)";
+			document.getElementById("second").style.MsTransform = "rotate(" + ds + "deg)";
+
+			/* Opera, Chrome, Safari */
+			document.getElementById("hour").style.WebkitTransform = "rotate(" + dh + "deg)";
+			document.getElementById("munite").style.WebkitTransform = "rotate(" + dm + "deg)";
+			document.getElementById("second").style.WebkitTransform = "rotate(" + ds + "deg)";
+
+			document.getElementById("digital").innerHTML = h + ":" + m + ":" + s;
+
+		}
+
+		//매 1초마다 함수 digital()을 호출하도록 타이머 생성
+		var timer = setInterval( function(){ digital(); }, 1000);
+	</script>
+ </body>
+</html>
