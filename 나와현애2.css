@@ -1,0 +1,20 @@
+
+html {background-color:#bd9a81;
+font-family: 'Nanum Pen Script', cursive;}
+
+ul {font-size: 40px;}
+h1 {font-size: 70px;
+text-align: center;
+text-decoration: underline;}
+
+}
+ul{border-right:1px solid gray;
+width:500px;
+margin:0;
+padding:20px;
+}
+
+img{display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;}
