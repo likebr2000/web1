@@ -2,11 +2,11 @@
 html {background-color:#bd9a81;
 font-family: 'Nanum Pen Script', cursive;}
 
-ul {font-size: 40px;}
-h1 {font-size: 70px;
+ul {font-size: 100px;}
+h1 {font-size: 150px;
 text-align: center;
 text-decoration: underline;}
-
+p{font-size: 80px;}
 }
 ul{border-right:1px solid gray;
 width:500px;
@@ -17,4 +17,4 @@ padding:20px;
 img{display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;}
+  width: 100%;}
