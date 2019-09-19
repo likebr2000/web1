@@ -1,0 +1,34 @@
+html {
+  background-color: #bd9a81;
+  font-family: 'Nanum Pen Script', cursive;
+}
+body{  margin-left: 0;
+    margin-right: 0;}
+h1 {
+  font-size: 150px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+h2 {
+  font-size: 100px
+}
+
+p {
+  font-size: 80px;
+}
+
+ul {
+  margin: 0;
+  padding: 20px;
+  font-size: 90px;
+  text-align: left;
+  padding: 0;
+  line-height:2em ;
+}
+
+img {
+
+  width: 100%;
+}
