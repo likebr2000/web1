@@ -1,7 +1,14 @@
 html {
-  background-color: #bd9a81;
+  
   font-family: 'Nanum Pen Script', cursive;
+
+  background: url("배경5.jpg") repeat 0 0 scroll;
+  background-color:#0C0C0C;
+  background-attachment: fixed;
+  height:300%;
+  width:100%;
 }
+
 body{  margin-left: 0;
     margin-right: 0;}
 h1 {
@@ -20,15 +27,23 @@ p {
 }
 
 ul {
+  text-decoration: none;
   margin: 0;
   padding: 20px;
   font-size: 90px;
-  text-align: left;
-  padding: 0;
   line-height:2em ;
+  text-align: center;
+  
 }
 
 img {
 
   width: 100%;
+}
+
+a{
+  font-size: 90px;
+  text-decoration: none;
+
+
 }
